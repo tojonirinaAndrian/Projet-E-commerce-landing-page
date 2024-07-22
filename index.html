@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobilia</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <nav id="navbar" class="navbar">
+            <a class="navbar_item">Logo</a>
+            <div class="navbar_item">
+                <div class="search-here" style="background-color: transparent;">
+                    <form action="" method="post" id="searchForm">
+                        <input type="search" name="search" id="searchField" placeholder="Rechercher">
+                        <label for="searchField" id="searchIcon" class="btn">
+                            <img src="images/Icons/8666693_search_icon.svg" alt="" class="nav-icon" id="searchBtn">
+                        </label>
+                    </form>
+                </div>
+                <div class="login-sign_up" style="background-color: transparent;">
+                    <button type="button" id="loginBtn" class="nav-btn btn" onclick="this.style.transition = 'none';">
+                        Connexion
+                    </button> 
+                    <button type="button" id="signUpBtn" class="nav-btn btn" onclick="this.style.transition= 'none';">
+                        Inscription
+                    </button>
+                </div>
+                <span id = "panierIcon" class="btn">
+                    <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" class="nav-icon">
+                    <span id="chiffrePanier">0</span>
+                </span>
+                <span id="menuIcon" class="btn" onclick="showMenu()">
+                    <img src="images/Icons/8666802_menu_navigation_icon.svg" alt="" class="nav-icon">
+                </span>
+            </div>
+        </nav>
+        <div class="responsiveBurgerMenu hidden">
+            <div  class="responsiveSearch">
+                <form action="" method="post">
+                    <input type="search" name="responsiveSearhField" id="responsiveSearchField" placeholder="Rechercher">
+                    <label for="responsiveSearchField" class="responsiveSearchIcon">
+                        <img src="images/Icons/8666693_search_icon.svg" alt="" srcset="">
+                    </label>
+                </form>
+            </div>
+            <div class="menuPrincipal">
+                <ul>
+                    <li class="actif"><a href="#" class="a_actif">Acceuil</a></li>
+                    <li><a href="#">A Propos</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="menuCategories">
+                <!-- <p style="margin: 0;">Nos categories</p> -->
+                <p class="nosCategoriesMenuBtn down" onclick="showCategoriesMenu()">
+                    Nos Categories 
+                    <span>
+                        <img src="images/Icons/8666673_chevron_up_icon.svg" alt="" srcset="">
+                    </span>
+                </p>
+                <ul class="menuDesCategories hiddenCategoriesMenu">
+                    <li><a href="#">Decoration</a></li>
+                    <li><a href="#">Canape & Fauteuils</a></li>
+                    <li><a href="#">Literie</a></li>
+                    <li><a href="#">Meubles</a></li>
+                    <li><a href="#">Table & Chaises</a></li>
+                </ul>
+            </div>
+
+            <div class="connectMenu">
+                <ul class="responsiveConnectionMenu">
+                    <li><a href="#">Connexion</a></li>
+                    <li><a href="#">Inscription</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="heroSection row">
+            <div class="heroText col-lg-5">
+                
+                <p class="collection">
+                    Produit du mois
+                </p>
+                <p class="titleText">Le <span class="special">luxe</span> s'offre A Vous</p>
+                
+                <p class="collection">
+                    Canape Relax    
+                </p>
+                <p class="textUnder">
+                    Une petite description du produit.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vel illum. 
+                    Doloribus tempore nulla veritatis excepturi
+                </p>
+                <div class="heroPrix">
+                    <p class="prixProduit">
+                        1590$
+                    </p>
+                </div>
+                <div class="heroButtonsContainer">
+                    <p  class="ajouterAuPanierBtn btn">Ajouter au panier</p>
+                    <p class="moreInfoBtn btn">Plus d'informations...</p>
+                </div>
+                
+            </div>
+            <div class="productImageContainer col-lg-7">
+                <img src="images/content/couch.png" alt="couchImg" id="productImage">
+            </div>
+        </section>
+
+        <section class="categoriesPopulaires row">
+            <p class="categoriesPopulairesTitle col-lg-12 petitTitre">
+                Nos Categories
+            </p>
+            <ul class="listeDesCategories">
+                <li class="categorie">
+                    <img src="Images Produits/Categories/Canapes Fauteuils.webp" alt="" srcset="">
+                    <p>Canapes & Fauteuils</p>
+                </li>
+                <li class="categorie">
+                    <img src="Images Produits/Categories/Chambr.jpg" alt="" srcset="">
+                    <p>Chambre</p>
+                </li>
+                <li class="categorie">
+                    <img src="Images Produits/Categories/Decoration.webp" alt="" srcset="">
+                    <p>Decoration</p>
+                </li>
+                <li class="categorie">
+                    <img src="Images Produits/Categories/Meubles.jpg" alt="" srcset="">
+                    <p>Meubles</p>
+                </li>
+                <li class="categorie">
+                    <img src="Images Produits/Categories/Table & Chaises.webp" alt="" srcset="">
+                    <p>Table & Chaises</p>
+                </li>
+            </ul>
+            <div class="listeDesCategoriesResponsive row">
+                <div class="col-4 categorieResponsive">
+                    <img src="Images Produits/Categories/Decoration.webp" alt="" srcset="">
+                    <p>Decoration</p>
+                </div>
+                <div class="col-4 categorieResponsive">
+                    <img src="Images Produits/Categories/Canapes Fauteuils.webp" alt="" srcset="">
+                    <p>Canapes & Fauteuils</p>
+                </div>
+                <div class="col-4 categorieResponsive">
+                    <img src="Images Produits/Categories/Chambr.jpg" alt="" srcset="">
+                    <p>Chambre</p>
+                </div>
+                <div class="col-4 categorieResponsive">
+                    <img src="Images Produits/Categories/Meubles.jpg" alt="" srcset="">
+                    <p>Meubles</p>
+                </div>
+                <div class="col-4 categorieResponsive">
+                    <img src="Images Produits/Categories/Table & Chaises.webp" alt="" srcset="">
+                    <p>Table & Chaises</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="nosProduitsSection">
+            <p class="nosProduitsTitle petitTitre">
+                Nos Best-Sellers
+            </p>
+
+            <div class="cardWraper row">
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Canapes & Fauteuils/Canape Celine/canape_2pl_tissu_gris_anthracite_chine__10610-scaled.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title nomProduit">Canape Celine</h4>
+                          <p class="prixProduit">1500$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Meubles/Chaises en tissu Flore/Flore_chaise_tissu__pied_métal_beige__11272-scaled.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title nomProduit">Chaise en tissu Flore</h4>
+                          <p class="prixProduit">500$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Decoration/Coussin Filaire - Deco Visage/Coussin_FILAIRE_DECO_VISAGE.webp" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title nomProduit">Coussin Filaire - Deco Visage</h4>
+                          <p class="prixProduit">100$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Canapes & Fauteuils/Canape Cosy/Cosy_canapé_3pl_tissu_recyclé_blanc_11117-1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                          <h4 class="card-title nomProduit">Canape Cosy</h4>
+                          <p class="prixProduit">2000$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Canapes & Fauteuils/Canape Celine/canape_2pl_tissu_gris_anthracite_chine__10610-scaled.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title nomProduit">Canape Celine</h4>
+                            <p class="prixProduit">1500$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Meubles/Chaises en tissu Flore/Flore_chaise_tissu__pied_métal_beige__11272-scaled.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title nomProduit">Chaise en tissu Flore</h4>
+                            <p class="prixProduit">500$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Decoration/Coussin Filaire - Deco Visage/Coussin_FILAIRE_DECO_VISAGE.webp" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title nomProduit">Coussin Filaire - Deco Visage</h4>
+                            <p class="prixProduit">100$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-3 leProduit">
+                    <div class="card carteProduit">
+                        <img class="card-img-top" src="Images Produits/Canapes & Fauteuils/Canape Cosy/Cosy_canapé_3pl_tissu_recyclé_blanc_11117-1.jpg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title nomProduit">Canape Cosy</h4>
+                            <p class="prixProduit">2000$</p>
+                        </div>
+                        <div class="seeMore">
+                            <a href="voir.html" class="actions">
+                                <img src="images/Icons/8666713_arrow_up_right_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="ajoutPanier.html" class="actions">
+                                <img src="images/Icons/8666616_shopping_cart_icon.svg" alt="" srcset="">
+                            </a>
+                            <a href="voir.html" class="lienProduit"></a>
+                        </div>
+                    </div>                 
+                </div>
+            </div>
+        </section>
+
+        <section class="temoignageClients">
+            <p class="petitTitre">
+                les temoignages de nos Clients
+            </p>
+            <div id="carousel" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row temoignage">
+                            <div class="col-md-3 partieGaucheTemoignage">
+                                <p class="nomDuClient">Nom et Prenoms du client</p>
+                                <img src="images/content/person_1.jpg" alt="" srcset="">
+                            </div>
+                            <div class="col-md-9 partieDroiteTemoignage">
+                                <p class="leTemoignage">
+                                    "J'ai récemment refait toute la décoration de mon salon avec des meubles de ce site, et je ne pourrais pas être plus heureuse. Les designs sont modernes et élégants, et les matériaux utilisés sont robustes. La livraison a été rapide et sans encombre. Bravo pour ce service impeccable !"                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row temoignage">
+                            <div class="col-md-3 partieGaucheTemoignage">
+                                <p class="nomDuClient">Nom et Prenoms du client</p>
+                                <img src="images/content/person_4.jpg" alt="" srcset="">
+                            </div>
+                            <div class="col-md-9 partieDroiteTemoignage">
+                                <p class="leTemoignage">
+                                    "Je suis absolument ravie de mon expérience d'achat chez Mobilia en Ligne. Le site est facile à naviguer et les descriptions des produits sont très détaillées. J'ai acheté un canapé et une table basse, et ils sont arrivés en parfait état, exactement comme sur les photos. Le service client a été très réactif à mes questions. Je recommande vivement !"
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row temoignage">
+                            <div class="col-md-3 partieGaucheTemoignage">
+                                <p class="nomDuClient">Nom et Prenoms du client</p>
+                                <img src="images/content/person_2.jpg" alt="" srcset="">
+                            </div>
+                            <div class="col-md-9 partieDroiteTemoignage">
+                                <p class="leTemoignage">
+                                    "Les meubles que j'ai commandés sont de très bonne qualité et très confortables. J'ai eu un petit souci avec la livraison, mais le service client a rapidement réglé le problème. Le choix des produits est vraiment large, et les prix sont compétitifs. Je suis très satisfait de mon achat et je reviendrai sûrement."
+                                </p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <a class="carousel-control-prev" data-target="#carousel" role="button" data-slide="prev">
+                    <div class="navigationIcon">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </div>
+                </a>
+                <a class="carousel-control-next" data-target="#carousel" role="button" data-slide="next">
+                    <div class="navigationIcon">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="container-fluid">
+        <div class="row theFooter">
+            <div class="col-md-5 footerLeft">
+                <div class="footerLogo">
+                    <p class="logo">
+                        Logo
+                    </p>
+                    <p class="texte">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, harum. Eius aliquid quo eligendi nobis quasi debitis.
+                    </p>
+                </div>
+                <div class="reseauxSociaux">
+                    <ul>
+                        <li><a href="#">
+                            <img src="images/Icons/8666638_instagram_icon.svg" alt="" srcset="">
+                        </a></li>
+                        <li><a href="#">
+                            <img src="images/Icons/8666770_linkedin_social_icon.svg" alt="" srcset="">
+                        </a></li>
+                        <li><a href="#">
+                            <img src="images/Icons/8666686_github_icon.svg" alt="" srcset="">
+                        </a></li>
+                        <!-- <li><a href="#">
+                            <img src="images/Icons/8666812_twitter_social_icon.svg" alt="" srcset="">
+                        </a></li> -->
+                        <li><a href="#">
+                            <img src="images/Icons/8666797_facebook_social_icon.svg" alt="" srcset="">
+                        </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-7 footerRight row">
+                <div class="links_1 col-md-6">
+                    <p class="naviguezIci">Naviguez</p>
+                    <div class="lesLiens">
+                        <ul>
+                            <li><a href="#">Accueil</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">A Propos</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Mon compte</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Canapes & Fauteuils</a></li>
+                            <li><a href="#">Chambres</a></li>
+                            <li><a href="#">Decoration</a></li>
+                            <li><a href="#">Meubles</a></li>
+                            <li><a href="#">Table & Chaises</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="newspaper col-md-6">
+                    <div class="coordonnees">
+                        <p class="contactez">Contactez-nous</p>
+                        <ul>
+                            <li><span class="special">Adresse :</span> Adresse de la boutique</li>
+                            <li><span class="special">Email :</span> mobilia@gmail.com</li>
+                            <li><span class="special">Appelez-Nous :</span> (+261)34 00 250 00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 bottomOne">
+                CopyRight 2024 Mobilia. Tous les droits sont reserves
+            </div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+    <script src="bootstrap5/js/bootstrap.js"></script>
+    <script src="bootstrap5/js/jquery.min.js"></script>
+    <script src="bootstrap5/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap5/js/popper.min.js"></script>
+</body>
+</html>
